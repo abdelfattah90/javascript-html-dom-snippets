@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Book List Javascript local storage</title>
+  <link rel="icon" href="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/13691885491579517854-256.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">  
+</head>
+
+<body>
+
+  <br />
+
+  <h1 class="text-center">Book list save in local storage</h1>
+  <br />
+  <div class="container text-right custom-control custom-switch">
+    <input type="checkbox" class="custom-control-input" id="darkSwitch">
+    <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+  </div>
+
+<div class="container">
+  <div class="col-md-6">
+      <form id="book-form">
+        <div class="form-group">
+          <b><label for="title">Title</label></b>
+          <input type="text" id="title" class="form-control">
+        </div>
+        <div class="form-group">
+          <b><label for="author">Author</label></b>
+          <input type="text" id="author" class="form-control">
+        </div>
+        <div class="form-group">
+          <b><label for="isbn">Book ID#</label></b>
+          <input type="text" id="isbn" class="form-control">
+        </div>
+        <input type="submit" value="Add Book" class="btn btn-primary btn-block">
+      </form>
+          
+  </div>
+      <table class="table table-striped mt-5">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Book ID#</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="book-list"></tbody>
+      </table>
+  </div>
+
+  <script src="darkmode.js"></script>
+  <script src="localstorage.js"></script>
+</body>
+</html>
